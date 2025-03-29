@@ -33,7 +33,12 @@
     
     <nav>
         <div class="container">
-            <ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                 {{ end }}
@@ -55,5 +60,18 @@
             <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Alle rettigheder forbeholdes.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
