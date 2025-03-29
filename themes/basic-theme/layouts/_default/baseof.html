@@ -20,12 +20,16 @@
     <meta property="og:url" content="{{ .Permalink }}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="site-title">{{ .Site.Title }}</h1>
-            <p class="site-description">{{ .Site.Params.description }}</p>
+    <div class="banner-container">
+        <div class="parallax-banner" style="background-image: url('{{ "images/building.png" | relURL }}');">
+            <div class="banner-overlay">
+                <div class="container">
+                    <h1 class="site-title">{{ .Site.Title }}</h1>
+                    <p class="site-description">{{ .Site.Params.description }}</p>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
     
     <nav>
         <div class="container">

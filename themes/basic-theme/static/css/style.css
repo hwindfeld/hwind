@@ -15,18 +15,42 @@ body {
     padding: 0 20px;
 }
 
-header {
-    background-color: #4a7c59;
-    color: white;
-    padding: 30px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Banner and Parallax Effect */
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-banner {
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .site-title {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.5em;
     text-align: center;
     transition: transform 0.3s ease;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .site-title:hover {
@@ -36,8 +60,10 @@ header {
 .site-description {
     margin: 10px 0 0;
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 nav {
@@ -226,6 +252,19 @@ footer a:hover {
         width: 95%;
     }
     
+    .parallax-banner {
+        height: 300px;
+        background-attachment: scroll; /* Disable parallax on mobile for better performance */
+    }
+    
+    .site-title {
+        font-size: 2em;
+    }
+    
+    .site-description {
+        font-size: 1.1em;
+    }
+    
     nav {
         padding: 10px 0;
     }
@@ -246,14 +285,6 @@ footer a:hover {
     .home-section {
         min-width: 100%;
         margin: 10px 0;
-    }
-    
-    .site-title {
-        font-size: 1.8em;
-    }
-    
-    .site-description {
-        font-size: 1em;
     }
 }
 

@@ -1,6 +1,39 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
+    
+    {{ if eq .Section "profil" }}
+    <div class="profile-container">
+        <div class="profile-content">
+            {{ .Content }}
+        </div>
+        <div class="profile-image">
+            <img src="/images/helle.png" alt="Helle" />
+        </div>
+    </div>
+    <style>
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        .profile-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .profile-image {
+            flex: 0 0 auto;
+            max-width: 300px;
+        }
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+    {{ else }}
     {{ .Content }}
+    {{ end }}
     
     {{ range .Pages }}
     <article>
