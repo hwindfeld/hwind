@@ -1,0 +1,29 @@
+{{ define "main" }}
+    <div class="home-content">
+        <h1>{{ .Title }}</h1>
+        
+        <div class="home-intro">
+            {{ .Content }}
+        </div>
+        
+        <div class="home-sections">
+            {{ range .Site.Menus.main }}
+            <div class="home-section">
+                <h2><a href="{{ .URL | relURL }}">{{ .Name }}</a></h2>
+                {{ if eq .Name "Profil" }}
+                <p>Autoriseret psykolog med mange års erfaring inden for både det erhvervspsykologiske og det kliniske område.</p>
+                {{ else if eq .Name "Samtaleterapi" }}
+                <p>Individuel samtaleterapi med fokus på at skabe konkrete og mærkbare forandringer.</p>
+                {{ else if eq .Name "Psykologiske undersøgelser" }}
+                <p>Grundige psykologiske undersøgelser med klare og brugbare konklusioner.</p>
+                {{ else if eq .Name "Praktisk information" }}
+                <p>Information om priser, betaling, transport og andre praktiske forhold.</p>
+                {{ else if eq .Name "Kontakt" }}
+                <p>Kontakt mig for at høre mere eller for at booke en tid.</p>
+                {{ end }}
+                <p><a href="{{ .URL | relURL }}">Læs mere</a></p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

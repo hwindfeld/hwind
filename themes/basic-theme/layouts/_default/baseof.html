@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description | default .Summary | default .Site.Params.description }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description | default .Summary | default .Site.Params.description }}{{ end }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title">{{ .Site.Title }}</h1>
+            <p class="site-description">{{ .Site.Params.description }}</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <div class="content">
+                {{ block "main" . }}{{ end }}
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Autoriseret psykolog - Tilknyttet sygesikringen - Chr X's Vej 56-58, 8260 Viby J - 25 12 08 63 - helle@helle-windfeld.dk</p>
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Alle rettigheder forbeholdes.</p>
+        </div>
+    </footer>
+</body>
+</html>

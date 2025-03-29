@@ -1,0 +1,35 @@
+baseURL = "https://helle-windfeld.dk/"
+languageCode = "da-dk"
+title = "Helle Windfeld - Psykolog"
+theme = "basic-theme"
+
+[params]
+  description = "Psykolog Helle Windfeld - Samtaleterapi og psykologiske undersøgelser"
+  author = "Helle Windfeld"
+  contact = "info@helle-windfeld.dk"
+  email = "helle@helle-windfeld.dk"
+  phone = "25 12 08 63"
+  address = "Chr X's Vej 56-58, 8260 Viby J"
+  credentials = "Autoriseret psykolog - Tilknyttet sygesikringen"
+
+[menu]
+  [[menu.main]]
+    name = "Profil"
+    url = "/profil/"
+    weight = 1
+  [[menu.main]]
+    name = "Samtaleterapi"
+    url = "/samtaleterapi/"
+    weight = 2
+  [[menu.main]]
+    name = "Psykologiske undersøgelser"
+    url = "/psykologiske-undersoegelser/"
+    weight = 3
+  [[menu.main]]
+    name = "Praktisk information"
+    url = "/praktisk-information/"
+    weight = 4
+  [[menu.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 5
