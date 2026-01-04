@@ -12,7 +12,7 @@ Chr X's Vej 56-58, 8260 Viby J
 ### Telefon
 25 12 08 63
 
-- Jeg træffes bedst mandag, tirsdag, torsdag og fredage ml 11.30 - 12.00
+- Jeg træffes bedst mandag, tirsdag, torsdag og fredage ml 11.40 - 11.55
 - Træffes jeg ikke, er du velkommen til at indtale en besked med navn og telefonnummer, hvorefter jeg kontakter dig hurtigst muligt - sædvanligvis samme eller efterfølgende dag.
 
 ### E-mail
