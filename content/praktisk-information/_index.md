@@ -16,7 +16,7 @@ Du kan også tage Letbanen (retning Odder), der stopper ca. 500 m fra klinikken 
 Der er p-plads lige ved siden af indgangsdøren til klinikken.
 
 ### Priser
-Med henvisning fra din læge er prisen pr. 01.04.25 for første samtale 469,86 kr. og for de efterfølgende 391,80 kr.
+Med henvisning fra din læge er prisen pr. 01.04.25 for første samtale 474,04 kr. og for de efterfølgende 395,28 kr.
 
 Hvis du skal betale selv er prisen 1050,00 kr. pr. konsultation.
 
