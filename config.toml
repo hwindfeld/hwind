@@ -10,7 +10,7 @@ theme = "basic-theme"
   email = "helle@helle-windfeld.dk"
   phone = "25 12 08 63"
   address = "Chr X's Vej 56-58, 8260 Viby J"
-  credentials = "Autoriseret psykolog - Tilknyttet sygesikringen"
+  credentials = "Klinisk psykolog - Tilknyttet sygesikringen"
 
 [menu]
   [[menu.main]]
